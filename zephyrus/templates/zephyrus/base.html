@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Symposium Zephyrus - {% block title %}Home{% endblock %}</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="zephyrus, symposium, it, environment, twente, university of twente">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap and stylesheets -->
+    <link rel="stylesheet" href="{% static 'zephyrus/css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'zephyrus/css/general.css' %}"/>
+    <link rel="stylesheet" href="{% static 'zephyrus/css/navbar.css' %}"/>
+    {% block stylesheets %}
+    {% endblock %}
+
+    <!-- FontAwesome and JavaScripts -->
+    {# TODO : JQuery#}
+    <script src="{% static 'zephyrus/js/landing.js' %}"></script>
+    <script src="{% static 'zephyrus/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'zephyrus/js/all.min.js' %}" ></script>
+
+
+    {% block scripts %}
+    {% endblock %}
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'zephyrus/img/favicon/apple-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'zephyrus/img/favicon/apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'zephyrus/img/favicon/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'zephyrus/img/favicon/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'zephyrus/img/favicon/apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'zephyrus/img/favicon/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'zephyrus/img/favicon/apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'zephyrus/img/favicon/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'zephyrus/img/favicon/apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192"
+          href="{% static 'zephyrus/img/favicon/android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'zephyrus/img/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'zephyrus/img/favicon/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'zephyrus/img/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'zephyrus/img/favicon/manifest.json' %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{% static 'zephyrus/img/favicon/ms-icon-144x144.png' %}">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md fixed-top">
+    <!-- Brand that shows on the navigation bar on mobile    -->
+    <a class="navbar-brand d-md-none" href="#">
+        Zephyrus
+    </a>
+
+    <!-- Button that controls collapsing of menu on mobile   -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="{% static 'zephyrus/img/hamburger.svg' %}" alt="hamburger">
+    </button>
+
+    <!-- The actual collapsed unit   -->
+    <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="nav navbar-nav w-100 justify-content-around">
+            <li class="nav-item">
+                <a class="home" href="{% url 'landing' %}">Home</a>
+            </li>
+            {#            <li class="nav-item">#}
+            {#                <a class="location" href="{% url 'program:location' symposium='zephyrus' %}">Location</a>#}
+            {#            </li>#}
+            {#            <li class="nav-item">#}
+            {#                <a class="partners" href="{% url 'partners:index' symposium='zephyrus' %}">Partners</a>#}
+            {#            </li>#}
+            {#            <li class="nav-item">#}
+            {#                <a class="speakers" href="{% url 'program:speakers' symposium='zephyrus' %}">Speakers</a>#}
+            {#            </li>#}
+            {#           <li class="nav-item">#}
+            {#                <a class="programme" href="{% url 'program:index' symposium='zephyrus' %}">Programme</a>#}
+            {#            </li>#}
+            <li class="nav-item">
+                <a class="committee" href="{% url 'committee' %}">Committee</a>
+            </li>
+            {#            <li class="nav-item">#}
+            {#                <a class="login" href="{% url 'visitors:login' symposium='zephyrus' %}">Tickets</a>#}
+            {#            </li>#}
+        </ul>
+    </div>
+</nav>
+
+{% block body %}{% endblock %}
+
+<footer class="container">
+    Symposium Zephyrus is organised by study association &nbsp;<a href="https://inter-actief.utwente.nl/"
+                                                                  target="_blank"><img
+        src="{% static 'zephyrus/img/ia-logo.png' %}" width="200px" alt="IA Logo"></a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,113 @@
+{% extends 'zephyrus/base.html' %}
+{% load static %}
+
+{% block title %}
+    | Home
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'zephyrus/css/landing.css' %}">
+{% endblock %}
+
+{% block scripts %}
+    <link rel="sytlesheet" href="{% static 'zephyrus/js/landing.js' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="wrapper">
+        <div id="logo" class="d-flex justify-content-center align-items-center flex-column">
+            <!-- particles.js -->
+            <script src="{% static 'zephyrus/js/three.r92.min.js' %}"></script>
+            <script src="{% static 'zephyrus/js/vanta.net.min.js' %}"></script>
+            <script src="{% static 'zephyrus/js/particles.min.js' %}"></script>
+            <script>
+                particlesJS.load('particles-blue', '{% static 'zephyrus/assets/particlesjs-blue.json' %}', function () {
+                    console.log('callback - particles.js blue config loaded');
+                    particlesJS.load('particles-green', '{% static 'zephyrus/assets/particlesjs-green.json' %}', function () {
+                        console.log('callback - particles.js green config loaded');
+                        particlesJS.load('particles-orange', '{% static 'zephyrus/assets/particlesjs-orange.json' %}', function () {
+                            console.log('callback - particles.js orange config loaded');
+                        });
+                    });
+                });
+            </script>
+
+            <div id="particles-blue" class="particles-container"></div>
+            <div id="particles-green" class="particles-container"></div>
+            <div id="particles-orange" class="particles-container"></div>
+
+            <div class="d-flex justify-content-center">
+                <img width="50%" class="img-fluid mt-5 pt-5" src="{% static 'zephyrus/img/zephyrus_logo.svg' %}"
+                     alt="Zephyrus Logo">
+            </div>
+            <h3 class="mx-3 mt-4 date"><i class="fas fa-calendar mx-2"
+                                             style="position: relative; font-size: 2.0rem; top:5px"></i>March 16th 2022
+            </h3>
+
+            <a href="#intro" class="scroll-down"></a>
+        </div>
+
+    </div>
+
+    <div id="intro" class="container-narrow">
+        <div class="d-flex justify-content-center">
+
+            <div>
+                <h1>Zephyrus</h1>
+                <span class="definition"><i> <b>noun: </b>The Ancient Greek god of the west wind, supposed to be the
+                        gentlest of the winds and the messenger of spring</i></span>
+
+                <hr>
+                <p class="narrow">
+
+                    <i>‘Showers starting above Enschede in 10 minutes’</i>, a simple notification of just a simple
+                    weather app.
+                    The question arises: How can a simple app know this and why is it so accurate? IT plays a large role
+                    in how we
+                    perceive our surroundings and adjust our behaviour accordingly.Symposium Zephyrus will examine the
+                    link between IT and the Environment:
+                    What is the effect of cryptocurrency on our environment or of 5G on plants and wildlife;
+                    How can we make programs consume less power; and what does the future hold for us. During the
+                    Symposium,
+                    we will cover the many roles IT plays in the environment.
+                    <br><br>
+
+                    <i>Have we sparked your interest? Visit our symposium on the 16th of March 2022!</i>
+
+
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Location info / date info    -->
+    <div class="location white section">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Location icon -->
+                <div class="col-lg-3 offset-lg-1 col-md-10 offset-md-1 d-flex align-items-center justify-content-center icon">
+                    <img src="{% static 'zephyrus/img/icons/calendar.svg' %}">
+                </div>
+                <!-- Information  -->
+                <div class="col info">
+                    <div class="col-lg-7 col-10 offset-1 location-wrapper">
+                        <div class="row text-row d-lg-flex justify-content-lg-start d-flex justify-content-center">
+                            <p class="title">
+                                Save the Date!
+                            </p>
+                        </div>
+                        <div class="row button-wrapper d-lg-inline justify-content-lg-start d-flex justify-content-center">
+                            <button onclick="window.open('https://calendar.google.com/event?action=TEMPLATE&tmeid=MDlnOWEwaHFzbHByYjl1dDZuYjhvdDJ1MTggY184b25oYTEwYjVxamw2ZDNnbjk4bGNhZTRhZ0Bn&tmsrc=c_8onha10b5qjl6d3gn98lcae4ag%40group.calendar.google.com','_blank')">
+                                Add to Calendar
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}
+

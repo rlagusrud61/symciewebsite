@@ -1,0 +1,94 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+h1 {
+    color: #0191B4;
+    font-size: 72px;
+    font-weight: bold;
+    margin-bottom: 10%;
+    text-align:center;
+}
+.committee{
+    font-weight: bold;
+}
+#committee{
+    background-color: #0191B4;
+}
+.scrolled{
+    background-color: white;
+    transition: background-color 200ms linear;
+}
+
+/* Group photo */
+.group{
+    height: 40vw;
+    max-height: 600px;
+    background-image: url("../img/committee/Committee.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+/* committees */
+/*.symcie{*/
+/*    background: url("../General/img/Swooshes/CvR.svg"), url("../General/img/Swooshes/committee.svg");*/
+/*    background-size: contain, cover;*/
+/*    background-repeat: no-repeat, no-repeat;*/
+/*    background-position: bottom -1px right -1px, center;*/
+/*    padding-bottom: 10vw;*/
+/*    padding-top: 70px;*/
+/*}*/
+
+.committee-person p{
+    color: white;
+    font-size: 30px;
+}
+.committee-person p i{
+    font-weight: 100;
+}
+
+.commissioner{
+    display:inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.commissioner .picture {
+    border-radius: 100%;
+    width: 70%;
+    height: auto;
+}
+.name{
+    font-size: 40px;
+    color:#0191B4;
+    font-weight: bolder ;
+}
+
+.icons{
+    margin-bottom: 70px;
+}
+
+.icons .icon{
+    width: 20%;
+    max-width: 55px;
+}
+
+.icons .icon img{
+    width: 100%;
+}
+
+a{
+    color: #D3DD18;
+    transition-duration: 0.5s;
+}
+
+a:hover{
+    color: #f4ff37;
+}

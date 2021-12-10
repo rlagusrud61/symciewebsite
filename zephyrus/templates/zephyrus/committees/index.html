@@ -1,0 +1,274 @@
+{% extends 'zephyrus/base.html' %}
+{% load static %}
+{% block title %}
+    |Committee
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'zephyrus/css/committee.css' %}">
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block body %}
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {#    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>#}
+
+    <!--    Own files-->
+
+    <div class="wrapper">
+        <!-- Navbar -->
+        <div class="nav-background" id="nav-bg"></div>
+        <div id="nav-placeholder" class="navigation"></div>
+
+        <!-- Group photo -->
+        <div class="group"></div>
+
+        <section id="committee" class="container-narrow">
+            <div class="container">
+                <h1 style="color:white;">Symposium Committee</h1>
+
+                <div class="row mb-5">
+                    <div class="col-4 commissioner font-white">
+                        <div class="row d-flex justify-content-center">
+                            <img class="picture" src="{% static 'zephyrus/img/committee/mariska.png' %}"
+                                 alt="Mariska Frelier">
+                        </div>
+                        <div class="row committee-person">
+                            <div class="col-10 offset-1 d-flex justify-content-center function align-items-center text-wrapper">
+                                <p><b>Mariska Frelier</b><br><i>Chairwoman</i></p>
+                            </div>
+                        </div>
+                        <div class="justify-content-center row icons">
+                            <div class="col-6 d-flex justify-content-around">
+                                <a target="_blank" href="https://www.linkedin.com/in/mariska-frelier/"><i
+                                        class="fab fa-linkedin-in fa-2x"></i></a>
+                                <a target="_blank" href="mailto:chairwoman@symposiumzephyrus.nl"><i
+                                        class="fas fa-at fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 commissioner font-white">
+                        <div class="row d-flex justify-content-center">
+                            <img class="picture" src="{% static 'zephyrus/img/committee/hyeonkyeong.png' %}"
+                                 alt="Hyeon Kyeong Kim">
+                        </div>
+                        <div class="row committee-person">
+                            <div
+                                    class="col-10 offset-1 d-flex justify-content-center function align-items-center text-wrapper">
+                                <p><b>Hyeon Kyeong Kim</b><br><i>Secretary &amp; Website</i></p>
+                            </div>
+                        </div>
+                        <div class="justify-content-center row icons">
+                            <div class="col-6 d-flex justify-content-around">
+                                <a target="_blank" href="http://www.linkedin.com/in/hyeon-kyeong-kim"><i
+                                        class="fab fa-linkedin-in fa-2x"></i></a>
+                                <a target="_blank" href="mailto:secretary@symposiumzephyrus.nl"><i
+                                        class="fas fa-at fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-4 commissioner font-white">
+                        <div class="row d-flex justify-content-center">
+                            <img class="picture" src="{% static 'zephyrus/img/committee/niels.png' %}"
+                                 alt="Niels Rotmensen">
+                        </div>
+                        <div class="row committee-person">
+                            <div
+                                    class="col-10 offset-1 d-flex justify-content-center function align-items-center text-wrapper">
+                                <p><b>Niels Rotmensen</b><br><i>Treasurer</i></p>
+                            </div>
+                        </div>
+                        <div class="justify-content-center row icons">
+                            <div class="col-6 d-flex justify-content-around">
+                                <a target="_blank" href="https://www.linkedin.com/in/niels-rotmensen/"><i
+                                        class="fab fa-linkedin-in fa-2x"></i></a>
+                                <a target="_blank" href="mailto:treasurer@symposiumzephyrus.nl"><i
+                                        class="fas fa-at fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mb-5 row">
+                    <div class="col-4 commissioner font-white">
+                        <div class="row d-flex justify-content-center">
+                            <img class="picture" src="{% static 'zephyrus/img/committee/oliver.png' %}"
+                                 alt="Oliver Davies">
+                        </div>
+                        <div class="row committee-person">
+                            <div
+                                    class="col-10 offset-1 d-flex justify-content-center function align-items-center text-wrapper">
+                                <p><b>Oliver Davies</b><br><i>Commissioner Speakers &amp; Promotion</i></p>
+                            </div>
+                        </div>
+                        <div class="justify-content-center row icons">
+                            <div class="col-6 d-flex justify-content-around">
+                                <a target="_blank" href="https://www.linkedin.com/in/davies-oliver/"><i
+                                        class="fab fa-linkedin-in fa-2x"></i></a>
+                                <a target="_blank" href="mailto:speakers@symposiumzephyrus.nl"><i
+                                        class="fas fa-at fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-4 commissioner font-white">
+                        <div class="row d-flex justify-content-center">
+                            <img class="picture" src="{% static 'zephyrus/img/committee/koen.png' %}"
+                                 alt="Koen de Jong">
+                        </div>
+                        <div class="row committee-person">
+                            <div
+                                    class="col-10 offset-1 d-flex justify-content-center function align-items-center text-wrapper">
+                                <p><b>Koen de Jong</b><br><i>Commissioner External Affairs</i></p>
+                            </div>
+                        </div>
+                        <div class="justify-content-center row icons">
+                            <div class="col-6 d-flex justify-content-around">
+                                <a target="_blank" href="https://www.linkedin.com/in/koendejong-/"><i
+                                        class="fab fa-linkedin-in fa-2x"></i></a>
+                                <a target="_blank" href="mailto:external@symposiumzephyrus.nl"><i
+                                        class="fas fa-at fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 commissioner font-white">
+                        <div class="row d-flex justify-content-center">
+                            <img class="picture" src="{% static 'zephyrus/img/committee/quirijn.png' %}"
+                                 alt="Quirijn Hoenink">
+                        </div>
+                        <div class="row committee-person">
+                            <div
+                                    class="col-10 offset-1 d-flex justify-content-center function align-items-center text-wrapper">
+                                <p><b>Quirijn Hoenink</b><br><i>Commissioner Logistics</i></p>
+                            </div>
+                        </div>
+                        <div class="justify-content-center row icons">
+                            <div class="col-6 d-flex justify-content-around">
+                                <a target="_blank" href="https://www.linkedin.com/in/quirijn-hoenink"><i
+                                        class="fab fa-linkedin-in fa-2x"></i></a>
+                                <a target="_blank" href="mailto:logistics@symposiumzephyrus.nl"><i
+                                        class="fas fa-at fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-5 row">
+                    <div class="justify-content-center commissioner font-white">
+                        <div class="row d-flex justify-content-center">
+                            <img class="picture" src="{% static 'zephyrus/img/committee/mikkel.jpg' %}"
+                                 alt="Michael Janssen"
+                                 style="width:25%; height:auto">
+                        </div>
+                        <div class="row committee-person">
+                            <div
+                                    class="col-10 offset-1 d-flex justify-content-center function align-items-center text-wrapper">
+                                <p><b>Michael Janssen</b><br><i>Board Representative</i></p>
+                            </div>
+                        </div>
+                        <div class="justify-content-center row icons">
+                            <div class="col-2 d-flex justify-content-around">
+                                <a target="_blank" href="https://www.linkedin.com/in/janssen-michael"><i
+                                        class="fab fa-linkedin-in fa-2x"></i></a>
+                                <a target="_blank" href="mailto:board@symposiumzephyrus.nl"><i
+                                        class="fas fa-at fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- committees of Recommendation -->
+        <section id="cva" class="container-narrow">
+            <div class="container">
+                <h1>Committee of Recommendation</h1>
+                <div class="row mb-3">
+                    <div class="col-4 commissioner font-white">
+                        <div class="row d-flex justify-content-center">
+                            <img class="picture" src=" {% static 'zephyrus/img/cva/tom_veldkamp.JPG' %}"
+                                 alt="Tom Veldkamp">
+                        </div>
+                        <div class="row">
+                            <div
+                                    class="col-10 offset-1 d-flex justify-content-center function align-items-center text-wrapper">
+                                <p><b>Tom Veldkamp</b><br><i>Rector Magnificus</i></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-4 commissioner font-white">
+                        <div class="row d-flex justify-content-center">
+                            <img class="picture" src=" {% static 'zephyrus/img/cva/vadim.jpg' %}" alt="Vadim Zaytsev">
+                        </div>
+                        <div class="row">
+                            <div
+                                    class="col-10 offset-1 d-flex justify-content-center function align-items-center text-wrapper">
+                                <p><b>Vadim Zaytsev</b><br><i>Programme Director Technical Computer Science</i></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 commissioner font-white">
+                        <div class="row d-flex justify-content-center">
+                            <img class="picture" src=" {% static 'zephyrus/img/cva/arend_rensink.jpg' %}"
+                                 alt="Arend Rensink">
+                        </div>
+                        <div class="row">
+                            <div
+                                    class="col-10 offset-1 d-flex justify-content-center function align-items-center text-wrapper">
+                                <p><b>Arend Rensink</b><br><i>EEMCS Faculty Board &amp; Former Programme Director
+                                    TCS</i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mb-3 row">
+
+                    <div class="col-6 commissioner font-white">
+                        <div class="row d-flex justify-content-center">
+                            <img class="picture" src="{% static 'zephyrus/img/cva/Iacob.jpg' %}" style="width:50%;"
+                                 alt="Maria Iacob">
+                        </div>
+                        <div class="row">
+                            <div
+                                    class="col-10 offset-1 d-flex justify-content-center function align-items-center text-wrapper">
+                                <p><b>Maria Iacob</b><br><i>Programme Director Business Information Technology</i></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 commissioner font-white">
+                        <div class="row d-flex justify-content-center">
+                            <img class="picture" src="{% static 'zephyrus/img/cva/thom_palstra.jpg' %}"
+                                 style="width:50%;" alt="Thom Palstra">
+                        </div>
+                        <div class="row">
+                            <div
+                                    class="col-10 offset-1 d-flex justify-content-center function align-items-center text-wrapper">
+                                <p><b>Thom Palstra</b><br><i>Former Rector Magnificus</i></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
