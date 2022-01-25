@@ -36,6 +36,9 @@
     font-size: min(35px, 9vw);
 }
 
+p{
+    font-size: 30px;
+}
 .preview{
     border: 2px solid white;
     width: 100%;
