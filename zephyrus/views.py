@@ -11,8 +11,8 @@ def landing(request):
 
 
 def location(request):
-    return HttpResponse("Location")
-
+    template = loader.get_template('zephyrus/program/location.html')
+    return HttpResponse(template.render({},request))
 
 def committee(request):
     template = loader.get_template('zephyrus/committees/index.html')

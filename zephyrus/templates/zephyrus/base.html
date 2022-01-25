@@ -67,13 +67,14 @@
         <ul class="nav navbar-nav w-100 justify-content-around">
             <li class="nav-item">
                 <a class="home" href="{% url 'landing' %}">Home</a>
-{#                <a class="home" href="{% url 'landing:index' symposium='zephyrus' %}">Home</a>#}
+                {#                <a class="home" href="{% url 'landing:index' symposium='zephyrus' %}">Home</a>#}
             </li>
-            {#            <li class="nav-item">#}
-            {#                <a class="location" href="{% url 'program:location' symposium='zephyrus' %}">Location</a>#}
-            {#            </li>#}
             <li class="nav-item">
-                {% comment %} <a class="partners" href="{% url 'partners:index' symposium='zephyrus'  %}">Partners</a> {% endcomment %}
+                {#                <a class="location" href="{% url 'program:location' symposium='zephyrus' %}">Location</a>#}
+                <a class="location" href="{% url 'location' %}">Location</a>
+            </li>
+            <li class="nav-item">
+                {#                 <a class="partners" href="{% url 'partners:index' symposium='zephyrus'  %}">Partners</a> #}
                 <a class="partners" href="{% url 'partners' %}">Partners</a>
             </li>
             {#            <li class="nav-item">#}

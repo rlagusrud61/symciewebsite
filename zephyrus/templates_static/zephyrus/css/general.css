@@ -12,7 +12,7 @@ h3{
     font-weight: 100;
 }
 p{
-    font-weight:400;
+    font-weight:300;
     color: black;
 }
 
@@ -45,4 +45,8 @@ footer{
     background-repeat: no-repeat;
     background-position: bottom left;
     height: 21vw;
+}
+
+.pt-5{
+    padding-top: 10rem !important;
 }

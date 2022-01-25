@@ -29,8 +29,8 @@ h1 {
 
 /* Group photo */
 .group{
-    height: 50vw;
-    max-height: 600px;
+    height: 40vw;
+    max-height: 900px;
     background-image: url("../img/committee/Committee.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -52,6 +52,13 @@ h1 {
     font-size: 30px;
 }
 .committee-person p i{
+    font-weight: 100;
+}
+
+.cva p{
+    font-size:25px;
+}
+.cva p i{
     font-weight: 100;
 }
 
