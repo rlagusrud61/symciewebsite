@@ -17,3 +17,7 @@ def location(request):
 def committee(request):
     template = loader.get_template('zephyrus/committees/index.html')
     return HttpResponse(template.render({}, request))
+
+def partners(request):
+    template = loader.get_template('zephyrus/partners/index.html')
+    return HttpResponse(template.render({}, request))

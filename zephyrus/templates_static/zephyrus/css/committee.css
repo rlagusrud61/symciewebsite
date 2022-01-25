@@ -29,7 +29,7 @@ h1 {
 
 /* Group photo */
 .group{
-    height: 40vw;
+    height: 50vw;
     max-height: 600px;
     background-image: url("../img/committee/Committee.jpg");
     background-size: cover;

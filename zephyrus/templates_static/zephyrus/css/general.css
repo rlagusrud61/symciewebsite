@@ -7,7 +7,6 @@ body{
     font-family: 'Lato', sans-serif !important;
     letter-spacing: 1px;
 }
-
 h3{
     color: white;
     font-weight: 100;
@@ -15,7 +14,6 @@ h3{
 p{
     font-weight:400;
     color: black;
-    font-size: large;
 }
 
 h1 {
@@ -25,7 +23,26 @@ h1 {
     margin-bottom: 10% !important;
 }
 
-
 footer{
     margin: 3rem;
+}
+
+.title{
+    padding-top: 30px;
+    font-size: min(107px, 19vw);
+    /*font-size: 100px;*/
+    font-weight: bold;
+}
+
+.subtitle{
+    font-size: min(45px, 9vw);
+    margin-bottom: 30px;
+    font-style: italic;
+}
+.swoosh{
+    background : url("../img/swoosh/bottom.svg") ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    height: 21vw;
 }

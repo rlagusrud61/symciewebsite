@@ -41,9 +41,15 @@
                      alt="Zephyrus Logo">
             </div>
             <h3 class="mx-3 mt-4 date"><i class="fas fa-calendar mx-2"
-                                             style="position: relative; font-size: 2.0rem; top:5px"></i>March 16th 2022
+                                          style="position: relative; font-size: 2.0rem; top:5px"></i>March 16th 2022
             </h3>
-
+            <div class="mt-5 partner-container">
+                <div class="wrapper">
+                    <a>
+{#                        <img alt="ia-logo" src="{% static 'zephyrus/img/ia-logo.png' %}"/>#}
+                    </a>
+                </div>
+            </div>
             <a href="#intro" class="scroll-down"></a>
         </div>
 
@@ -85,25 +91,12 @@
     <div class="location white section">
         <div class="container-fluid">
             <div class="row">
-                <!-- Location icon -->
-                <div class="col-lg-3 offset-lg-1 col-md-10 offset-md-1 d-flex align-items-center justify-content-center icon">
-                    <img src="{% static 'zephyrus/img/icons/calendar.svg' %}" alt="Calendar">
-                </div>
                 <!-- Information  -->
-                <div class="col info">
-                    <div class="col-lg-7 col-10 offset-1 location-wrapper">
-                        <div class="row text-row d-lg-flex justify-content-lg-start d-flex justify-content-center">
-                            <p class="title">
-                                Save the Date!
-                            </p>
-                        </div>
-                        <div class="row button-wrapper d-lg-inline justify-content-lg-start d-flex justify-content-center">
-                            <button onclick="window.open('https://calendar.google.com/event?action=TEMPLATE&tmeid=MDlnOWEwaHFzbHByYjl1dDZuYjhvdDJ1MTggY184b25oYTEwYjVxamw2ZDNnbjk4bGNhZTRhZ0Bn&tmsrc=c_8onha10b5qjl6d3gn98lcae4ag%40group.calendar.google.com','_blank')">
-                                Add to Calendar
-
-                            </button>
-                        </div>
-                    </div>
+                <div class="d-lg-flex justify-content-lg-center d-flex justify-content-center">
+                    <button id="calendar" type="button" class="btn-grad btn"
+                            onclick="window.open('https://calendar.google.com/event?action=TEMPLATE&tmeid=Mmd0aDE0bmNvNGUxcHRzYmtvdXNscjdnNzMgY192dXZ0djlxMWF1Zmg5cTJtMXVoNjcxa2c2c0Bn&tmsrc=c_vuvtv9q1aufh9q2m1uh671kg6s%40group.calendar.google.com','_blank')">
+                        Add to Calendar
+                    </button>
                 </div>
             </div>
         </div>

@@ -19,11 +19,13 @@ nav{
 }
 
 .navbar-brand {
+    padding-left: 10px;
     color: #0191B4;
 }
 
 nav a{
     color: white;
+    text-decoration: none;
 }
 
 nav a:hover{

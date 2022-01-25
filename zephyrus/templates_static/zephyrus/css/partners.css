@@ -1,0 +1,38 @@
+.partners{
+    font-weight: bold;
+}
+
+.wrapper{
+    padding-top: 73px;
+}
+
+
+.partner-wrapper{
+    min-height: 92.5vh;
+    padding-bottom: 200px;
+}
+
+p{
+    text-align: center;
+}
+
+
+.company{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 150px;
+}
+
+.company a{
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a img{
+    max-width: 100%;
+    max-height: 100%;
+}
+

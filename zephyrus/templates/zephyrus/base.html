@@ -22,7 +22,7 @@
     {# TODO : JQuery#}
     <script src="{% static 'zephyrus/js/landing.js' %}"></script>
     <script src="{% static 'zephyrus/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'zephyrus/js/all.min.js' %}" ></script>
+    <script src="{% static 'zephyrus/js/all.min.js' %}"></script>
 
 
     {% block scripts %}
@@ -67,13 +67,15 @@
         <ul class="nav navbar-nav w-100 justify-content-around">
             <li class="nav-item">
                 <a class="home" href="{% url 'landing' %}">Home</a>
+{#                <a class="home" href="{% url 'landing:index' symposium='zephyrus' %}">Home</a>#}
             </li>
             {#            <li class="nav-item">#}
             {#                <a class="location" href="{% url 'program:location' symposium='zephyrus' %}">Location</a>#}
             {#            </li>#}
-            {#            <li class="nav-item">#}
-            {#                <a class="partners" href="{% url 'partners:index' symposium='zephyrus' %}">Partners</a>#}
-            {#            </li>#}
+            <li class="nav-item">
+                {% comment %} <a class="partners" href="{% url 'partners:index' symposium='zephyrus'  %}">Partners</a> {% endcomment %}
+                <a class="partners" href="{% url 'partners' %}">Partners</a>
+            </li>
             {#            <li class="nav-item">#}
             {#                <a class="speakers" href="{% url 'program:speakers' symposium='zephyrus' %}">Speakers</a>#}
             {#            </li>#}
@@ -81,7 +83,8 @@
             {#                <a class="programme" href="{% url 'program:index' symposium='zephyrus' %}">Programme</a>#}
             {#            </li>#}
             <li class="nav-item">
-                <a class="committee" href="{% url 'committee' %}">Committee</a>
+                {#                <a class="committee" href="{% url 'committees:index' symposium='zephyrus' %}">Committee</a>#}
+                <a class="committee" href="{% url 'committees' %}">Committee</a>
             </li>
             {#            <li class="nav-item">#}
             {#                <a class="login" href="{% url 'visitors:login' symposium='zephyrus' %}">Tickets</a>#}
@@ -92,10 +95,14 @@
 
 {% block body %}{% endblock %}
 
-<footer class="container">
-    Symposium Zephyrus is organised by study association &nbsp;<a href="https://inter-actief.utwente.nl/"
-                                                                  target="_blank"><img
-        src="{% static 'zephyrus/img/ia-logo.png' %}" width="200px" alt="IA Logo"></a>
-</footer>
+<div class="swoosh">
+    <footer class="container">
+
+        Symposium Zephyrus is organised by study association &nbsp;<a href="https://inter-actief.utwente.nl/"
+                                                                      target="_blank"><img
+            src="{% static 'zephyrus/img/ia-logo.png' %}" width="200px" alt="IA Logo"></a>
+    </footer>
+
+</div>
 </body>
 </html>
