@@ -11,7 +11,7 @@
       "value": "#fe7a15"
     },
     "shape": {
-      "type": "star",
+      "type": "circle",
       "stroke": {
         "width": 0,
         "color": "#000000"
