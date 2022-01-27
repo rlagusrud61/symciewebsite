@@ -1,18 +1,20 @@
-body{
+body {
     background-color: #ffffff;
     text-align: center;
-    width:100%;
-    height:100%;
-    margin:0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
     font-family: 'Lato', sans-serif !important;
     letter-spacing: 1px;
 }
-h3{
+
+h3 {
     color: white;
     font-weight: 100;
 }
-p{
-    font-weight:300;
+
+p {
+    font-weight: 300;
     color: black;
 }
 
@@ -23,52 +25,54 @@ h1 {
     margin-bottom: 10% !important;
 }
 
-footer{
+footer {
     margin: 3rem;
 }
 
-.title{
+.title {
     padding-top: 30px;
     font-size: min(107px, 19vw);
     font-weight: bold;
 }
 
-.subtitle{
+.subtitle {
     font-size: min(45px, 9vw);
     margin-bottom: 30px;
     font-style: italic;
 }
-.swoosh{
-    background : url("../img/swoosh/bottom.svg") ;
+
+.swoosh {
+    background: url("../img/swoosh/bottom.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom left;
     height: 30vw;
 }
 
-.pt-5{
+.pt-5 {
     padding-top: 10rem !important;
 }
 
-@media (max-width: 425px){
+@media (max-width: 425px) {
 
-    .description{
-     font-size: 20px!important;
+    .description {
+        font-size: 20px !important;
+        height: auto;
+        padding-bottom: 70px;
     }
-    /*.swoosh{*/
-    /*    height:100vw;*/
-    /*}*/
     p {
         font-size: 15px;
     }
 
-    h1{
-        font-size: 40px!important;
+    h1 {
+        font-size: 40px !important;
     }
-    footer{
+
+    footer {
         font-size: 10px;
     }
-    footer img{
-        width:40%;
+
+    footer img {
+        width: 40%;
     }
 }
