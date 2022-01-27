@@ -14,6 +14,7 @@
     <!-- Bootstrap and stylesheets -->
 
     <link rel="stylesheet" href="{% static 'zephyrus/css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'zephyrus/css/bootstrap.min.css' %}"/>
     <link rel="stylesheet" href="{% static 'zephyrus/css/general.css' %}"/>
     <link rel="stylesheet" href="{% static 'zephyrus/css/navbar.css' %}"/>
     {% block stylesheets %}
@@ -23,7 +24,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="{% static 'zephyrus/js/landing.js' %}"></script>
     <script src="{% static 'zephyrus/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'zephyrus/js/all.min.js' %}"></script>
+    {#    <script src="{% static 'zephyrus/js/all.min.js' %}"></script>#}
 
 
     {% block scripts %}
@@ -52,46 +53,49 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-md fixed-top">
-    <!-- Brand that shows on the navigation bar on mobile    -->
-    <a class="navbar-brand d-md-none" href="#">
-        Zephyrus
-    </a>
+    <div class="container-fluid">
+        <!-- Brand that shows on the navigation bar on mobile    -->
+{#        <a class="navbar-brand d-md-none" href="{% url 'content:index' symposium='zephyrus' %}">#}
+            <a class="navbar-brand d-md-none" href="{% url 'content' %}">
+            Zephyrus
+        </a>
 
-    <!-- Button that controls collapsing of menu on mobile   -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
-            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-        <img src="{% static 'zephyrus/img/hamburger.svg' %}" alt="hamburger">
-    </button>
+        <!-- Button that controls collapsing of menu on mobile   -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+                aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="{% static 'zephyrus/img/hamburger.svg' %}" alt="hamburger">
+        </button>
 
-    <!-- The actual collapsed unit   -->
-    <div class="collapse navbar-collapse" id="navbarToggler">
-        <ul class="nav navbar-nav w-100 justify-content-around">
-            <li class="nav-item">
-                <a class="home" href="{% url 'content' %}">Home</a>
-                {#                <a class="home" href="{% url 'landing:index' symposium='zephyrus' %}">Home</a>#}
-            </li>
-            <li class="nav-item">
-                {#                <a class="location" href="{% url 'program:location' symposium='zephyrus' %}">Location</a>#}
-                <a class="location" href="{% url 'location' %}">Location</a>
-            </li>
-            <li class="nav-item">
-                {#                 <a class="partners" href="{% url 'partners:index' symposium='zephyrus'  %}">Partners</a> #}
-                <a class="partners" href="{% url 'partners' %}">Partners</a>
-            </li>
-            {#            <li class="nav-item">#}
-            {#                <a class="speakers" href="{% url 'program:speakers' symposium='zephyrus' %}">Speakers</a>#}
-            {#            </li>#}
-            {#           <li class="nav-item">#}
-            {#                <a class="programme" href="{% url 'program:index' symposium='zephyrus' %}">Programme</a>#}
-            {#            </li>#}
-            <li class="nav-item">
-                {#                <a class="committee" href="{% url 'committees:index' symposium='zephyrus' %}">Committee</a>#}
-                <a class="committee" href="{% url 'committees' %}">Committee</a>
-            </li>
-            {#            <li class="nav-item">#}
-            {#                <a class="login" href="{% url 'visitors:login' symposium='zephyrus' %}">Tickets</a>#}
-            {#            </li>#}
-        </ul>
+        <!-- The actual collapsed unit   -->
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="nav navbar-nav me-auto w-100 justify-content-around">
+                <li class="nav-item">
+                    <a class="home" href="{% url 'content' %}">Home</a>
+                    {#                <a class="home" href="{% url 'landing:index' symposium='zephyrus' %}">Home</a>#}
+                </li>
+                <li class="nav-item">
+                    {#                <a class="location" href="{% url 'program:location' symposium='zephyrus' %}">Location</a>#}
+                    <a class="location" href="{% url 'location' %}">Location</a>
+                </li>
+                <li class="nav-item">
+                    {#                 <a class="partners" href="{% url 'partners:index' symposium='zephyrus'  %}">Partners</a> #}
+                    <a class="partners" href="{% url 'partners' %}">Partners</a>
+                </li>
+                {#            <li class="nav-item">#}
+                {#                <a class="speakers" href="{% url 'program:speakers' symposium='zephyrus' %}">Speakers</a>#}
+                {#            </li>#}
+                {#           <li class="nav-item">#}
+                {#                <a class="programme" href="{% url 'program:index' symposium='zephyrus' %}">Programme</a>#}
+                {#            </li>#}
+                <li class="nav-item">
+                    {#                <a class="committee" href="{% url 'committees:index' symposium='zephyrus' %}">Committee</a>#}
+                    <a class="committee" href="{% url 'committees' %}">Committee</a>
+                </li>
+                {#            <li class="nav-item">#}
+                {#                <a class="login" href="{% url 'visitors:login' symposium='zephyrus' %}">Tickets</a>#}
+                {#            </li>#}
+            </ul>
+        </div>
     </div>
 </nav>
 
