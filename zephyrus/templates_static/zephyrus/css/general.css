@@ -30,7 +30,6 @@ footer{
 .title{
     padding-top: 30px;
     font-size: min(107px, 19vw);
-    /*font-size: 100px;*/
     font-weight: bold;
 }
 
@@ -44,9 +43,32 @@ footer{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom left;
-    height: 21vw;
+    height: 30vw;
 }
 
 .pt-5{
     padding-top: 10rem !important;
+}
+
+@media (max-width: 425px){
+
+    .description{
+     font-size: 20px!important;
+    }
+    /*.swoosh{*/
+    /*    height:100vw;*/
+    /*}*/
+    p {
+        font-size: 15px;
+    }
+
+    h1{
+        font-size: 40px!important;
+    }
+    footer{
+        font-size: 10px;
+    }
+    footer img{
+        width:40%;
+    }
 }

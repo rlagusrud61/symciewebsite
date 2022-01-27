@@ -1,6 +1,7 @@
 body {
     font-family: 'Lato', sans-serif;
 }
+
 .row {
     display: -ms-flexbox;
     display: flex;
@@ -9,26 +10,30 @@ body {
     margin-right: -15px;
     margin-left: -15px;
 }
+
 h1 {
     color: #0191B4;
     font-size: 72px;
     font-weight: bold;
     margin-bottom: 10%;
-    text-align:center;
+    text-align: center;
 }
-.committee{
+
+.committee {
     font-weight: bold;
 }
-#committee{
+
+#committee {
     background-color: #0191B4;
 }
-.scrolled{
+
+.scrolled {
     background-color: white;
     transition: background-color 200ms linear;
 }
 
 /* Group photo */
-.group{
+.group {
     height: 40vw;
     max-height: 900px;
     background-image: url("../img/committee/Committee.jpg");
@@ -47,55 +52,69 @@ h1 {
 /*    padding-top: 70px;*/
 /*}*/
 
-.committee-person p{
+.committee-person p {
     color: white;
     font-size: 30px;
 }
-.committee-person p i{
+
+.committee-person p i {
     font-weight: 100;
 }
 
-.cva p{
-    font-size:25px;
+.cva p {
+    font-size: 25px;
 }
-.cva p i{
+
+.cva p i {
     font-weight: 100;
 }
 
-.commissioner{
-    display:inline-flex;
+.commissioner {
+    display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 .commissioner .picture {
     border-radius: 100%;
     width: 70%;
     height: auto;
 }
-.name{
+
+.name {
     font-size: 40px;
-    color:#0191B4;
-    font-weight: bolder ;
+    color: #0191B4;
+    font-weight: bolder;
 }
 
-.icons{
+.icons {
     margin-bottom: 70px;
 }
 
-.icons .icon{
+.icons .icon {
     width: 20%;
     max-width: 55px;
 }
 
-.icons .icon img{
+.icons .icon img {
     width: 100%;
 }
 
-a{
+a {
     color: #D3DD18;
     transition-duration: 0.5s;
 }
 
-a:hover{
+a:hover {
     color: #f4ff37;
+}
+
+@media screen and (max-width: 860px) {
+    .committee-person p {
+        font-size: 20px;
+    }
+
+    .cva p {
+        font-size: 20px;
+    }
 }

@@ -55,6 +55,20 @@
 
     </div>
 
+    <div class="partners">
+{#        {% for partner in partners %}#}
+{#            {% if partner.show_prominent %}#}
+{#                <img alt="{{ partner.name }}" src="{% if partner.logo %}{{ partner.logo.url }}{% endif %}"#}
+{#                     height="100px" width="auto"/>#}
+{#            {% endif %}#}
+{#        {% endfor %}#}
+
+{#        <img alt="YER" src="{% static 'zephyrus/img/partners/YER.jpg' %}">#}
+{#        <img alt="SST" src="{% static 'zephyrus/img/partners/sst.png' %}">#}
+{#        <img alt="IMC" src="{% static 'zephyrus/img/partners/IMC.jpg' %}">#}
+    </div>
+
+
     <div id="intro" class="container-narrow">
         <div class="d-flex justify-content-center">
 
@@ -64,7 +78,7 @@
                         gentlest of the winds and the messenger of spring</i></span>
 
                 <hr>
-                <p class="narrow">
+                <p class="description narrow">
 
                     <i>‘Showers starting above Enschede in 10 minutes’</i>, a simple notification of just a simple
                     weather app.

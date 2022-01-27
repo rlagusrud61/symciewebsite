@@ -9,6 +9,7 @@
 #logo {
     min-height: 100vh;
     background-color: #141414;
+    padding-bottom: 120px;
 }
 
 
@@ -91,11 +92,12 @@
     font-weight: 100;
 }
 
-p {
-    max-width: 40em;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    font-size: 24px;
+
+
+.description{
+    font-weight:300;
+    color: black;
+    font-size: 30px;
 }
 
 .narrow {
@@ -190,4 +192,8 @@ p {
     to {
         opacity: 1;
     }
+}
+
+@media (max-width: 425px) {
+
 }
