@@ -14,15 +14,30 @@
 }
 .slider-element {
     
-    display: block;
-    max-height: 300px;
+    max-height: 250px;
     width: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /*
     max-width: 100vw;
     max-height: 300px;
     */
     
 }
+
+.center-slick-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.slick-slider {
+
+}
+
 .slick-slider img {
     display: block;
 }

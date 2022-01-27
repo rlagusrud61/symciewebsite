@@ -68,9 +68,9 @@
 {#            {% endif %}#}
 {#        {% endfor %}#}
 
-        <a href="https://www.yer.nl/EN/13379593/CV-check-Symposium.html?utm_source=websiteSymposium"><div><img class="slider-element" alt="YER" src="{% static 'zephyrus/img/partners/YER.jpg' %}"></div></a>
-        <a href="https://sst-software.nl"><div><img class="slider-element" alt="SST" src="{% static 'zephyrus/img/partners/sst.png' %}"></div></a>
-        <a href="https://https://careers.imc.com/eu/en"><div><img class="slider-element" alt="IMC" src="{% static 'zephyrus/img/partners/IMC.jpg' %}"></div></a>
+        <a href="https://www.yer.nl/EN/13379593/CV-check-Symposium.html?utm_source=websiteSymposium"><div class="center-slick-slider><img class="slider-element" alt="YER" src="{% static 'zephyrus/img/partners/YER.jpg' %}"></div></a>
+        <a href="https://sst-software.nl"><div class="center-slick-slider"><img class="slider-element" alt="SST" src="{% static 'zephyrus/img/partners/sst.png' %}"></div></a>
+        <a href="https://https://careers.imc.com/eu/en"><div class="center-slick-slider><img class="slider-element" alt="IMC" src="{% static 'zephyrus/img/partners/IMC.jpg' %}"></div></a>
     </div>
 
     <script>
@@ -82,6 +82,7 @@
                 autoplaySpeed: 2000,
                 slidesToShow: 1,
                 centerMode: true,
+                centerPadding: '-200px',
                 arrows: false,
                 //variableWidth: true,
             }).slickGoTo(Math.floor(Math.random() * $('.slick-slider').length));
