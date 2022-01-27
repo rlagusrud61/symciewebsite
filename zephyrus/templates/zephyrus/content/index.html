@@ -60,7 +60,7 @@
 
     </div>
 
-    <div class="partners slick-slider">
+    <div id="banner" class="partners slick-slider">
 {#        {% for partner in partners %}#}
 {#            {% if partner.show_prominent %}#}
 {#                <img alt="{{ partner.name }}" src="{% if partner.logo %}{{ partner.logo.url }}{% endif %}"#}
@@ -75,6 +75,7 @@
 
     <script>
         $(document).ready(function() {
+            console.log(Math.floor(Math.random() * $('#banner').length))
             $('.slick-slider').slick({
                 accessibility: false,
                 infinite: true,
@@ -84,8 +85,9 @@
                 centerMode: true,
                 centerPadding: '-200px',
                 arrows: false,
+                initialSlide: Math.floor(Math.random()*$('#banner').children().length),
                 //variableWidth: true,
-            }).slickGoTo(Math.floor(Math.random() * $('.slick-slider').length));
+            })
         });
     </script>
 
