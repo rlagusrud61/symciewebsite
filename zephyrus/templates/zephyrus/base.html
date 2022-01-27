@@ -67,7 +67,7 @@
     <div class="collapse navbar-collapse" id="navbarToggler">
         <ul class="nav navbar-nav w-100 justify-content-around">
             <li class="nav-item">
-                <a class="home" href="{% url 'landing' %}">Home</a>
+                <a class="home" href="{% url 'content' %}">Home</a>
                 {#                <a class="home" href="{% url 'landing:index' symposium='zephyrus' %}">Home</a>#}
             </li>
             <li class="nav-item">
@@ -97,12 +97,12 @@
 
 {% block body %}{% endblock %}
 
-    <footer class="container">
+<footer class="container">
 
-        Symposium Zephyrus is organised by study association &nbsp;<a href="https://inter-actief.utwente.nl/"
-                                                                      target="_blank"><img
-            src="{% static 'zephyrus/img/ia-logo.png' %}" width="200px" alt="IA Logo"></a>
-    </footer>
+    Symposium Zephyrus is organised by study association &nbsp;<a href="https://inter-actief.utwente.nl/"
+                                                                  target="_blank"><img
+        src="{% static 'zephyrus/img/ia-logo.png' %}" width="200px" alt="IA Logo"></a>
+</footer>
 
 <div class="swoosh">
 </div>

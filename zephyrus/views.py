@@ -5,7 +5,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def landing(request):
+def content(request):
     template = loader.get_template('zephyrus/content/index.html')
     return HttpResponse(template.render({},request))
 
