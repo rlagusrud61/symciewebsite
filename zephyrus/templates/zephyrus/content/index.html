@@ -6,7 +6,9 @@
 {% endblock %}
 
 {% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="{% static 'zephyrus/css/landing.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'zephyrus/css/slider.css' %}">
 {% endblock %}
 
 {% block scripts %}
@@ -14,6 +16,9 @@
 {% endblock %}
 
 {% block body %}
+<!-- Slick slider -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <div class="wrapper">
         <div id="logo" class="d-flex justify-content-center align-items-center flex-column">
             <!-- particles.js -->
@@ -55,7 +60,7 @@
 
     </div>
 
-    <div class="partners">
+    <div id="banner" class="partners slick-slider">
 {#        {% for partner in partners %}#}
 {#            {% if partner.show_prominent %}#}
 {#                <img alt="{{ partner.name }}" src="{% if partner.logo %}{{ partner.logo.url }}{% endif %}"#}
@@ -63,10 +68,28 @@
 {#            {% endif %}#}
 {#        {% endfor %}#}
 
-{#        <img alt="YER" src="{% static 'zephyrus/img/partners/YER.jpg' %}">#}
-{#        <img alt="SST" src="{% static 'zephyrus/img/partners/sst.png' %}">#}
-{#        <img alt="IMC" src="{% static 'zephyrus/img/partners/IMC.jpg' %}">#}
+        <a href="https://www.yer.nl/EN/13379593/CV-check-Symposium.html?utm_source=websiteSymposium"><div class="center-slick-slider"><img class="slider-element" alt="YER" src="{% static 'zephyrus/img/partners/YER.jpg' %}"></div></a>
+        <a href="https://sst-software.nl"><div class="center-slick-slider"><img class="slider-element" alt="SST" src="{% static 'zephyrus/img/partners/sst.png' %}"></div></a>
+        <a href="https://careers.imc.com/eu/en"><div class="center-slick-slider"><img class="slider-element" alt="IMC" src="{% static 'zephyrus/img/partners/IMC.jpg' %}"></div></a>
     </div>
+
+    <script>
+        $(document).ready(function() {
+            console.log(Math.floor(Math.random() * $('#banner').length))
+            $('.slick-slider').slick({
+                accessibility: false,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                slidesToShow: 1,
+                centerMode: true,
+                centerPadding: '-200px',
+                arrows: false,
+                initialSlide: Math.floor(Math.random()*$('#banner').children().length),
+                //variableWidth: true,
+            })
+        });
+    </script>
 
 
     <div id="intro" class="container-narrow">
