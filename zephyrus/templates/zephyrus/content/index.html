@@ -16,8 +16,8 @@
 {% endblock %}
 
 {% block body %}
-<!-- Slick slider -->
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Slick slider -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <div class="wrapper">
         <div id="logo" class="d-flex justify-content-center align-items-center flex-column">
@@ -51,7 +51,7 @@
             <div class="mt-5 partner-container">
                 <div class="wrapper">
                     <a>
-{#                        <img alt="ia-logo" src="{% static 'zephyrus/img/ia-logo.png' %}"/>#}
+                        {#                        <img alt="ia-logo" src="{% static 'zephyrus/img/ia-logo.png' %}"/>#}
                     </a>
                 </div>
             </div>
@@ -61,20 +61,25 @@
     </div>
 
     <div id="banner" class="partners slick-slider">
-{#        {% for partner in partners %}#}
-{#            {% if partner.show_prominent %}#}
-{#                <img alt="{{ partner.name }}" src="{% if partner.logo %}{{ partner.logo.url }}{% endif %}"#}
-{#                     height="100px" width="auto"/>#}
-{#            {% endif %}#}
-{#        {% endfor %}#}
+        {% for partner in partners %} {% if partner.show_advert %}
+            <a href="{{ partner.website }}">
+                <div class="center-slick-slider">
+                    <img class="slider-element" alt="{{ partner.name }}"
+                         src="{% if partner.logo %}{{ partner.logo.url }}{% endif %}"
+                    />
+                </div>
+            </a>
+        {% endif %}
+        {% endfor %}
 
-        <a href="https://www.yer.nl/EN/13379593/CV-check-Symposium.html?utm_source=websiteSymposium"><div class="center-slick-slider"><img class="slider-element" alt="YER" src="{% static 'zephyrus/img/partners/YER.jpg' %}"></div></a>
-        <a href="https://sst-software.nl"><div class="center-slick-slider"><img class="slider-element" alt="SST" src="{% static 'zephyrus/img/partners/sst.png' %}"></div></a>
-        <a href="https://careers.imc.com/eu/en"><div class="center-slick-slider"><img class="slider-element" alt="IMC" src="{% static 'zephyrus/img/partners/IMC.jpg' %}"></div></a>
+        {#                For testing#}
+        {#                <a href="https://www.yer.nl/EN/13379593/CV-check-Symposium.html?utm_source=websiteSymposium"><div class="center-slick-slider"><img class="slider-element" alt="YER" src="{% static 'zephyrus/img/partners/YER.jpg' %}"></div></a>#}
+        {#                <a href="https://sst-software.nl"><div class="center-slick-slider"><img class="slider-element" alt="SST" src="{% static 'zephyrus/img/partners/sst.png' %}"></div></a>#}
+        {#                <a href="https://careers.imc.com/eu/en"><div class="center-slick-slider"><img class="slider-element" alt="IMC" src="{% static 'zephyrus/img/partners/IMC.jpg' %}"></div></a>#}
     </div>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             console.log(Math.floor(Math.random() * $('#banner').length))
             $('.slick-slider').slick({
                 accessibility: false,
@@ -85,7 +90,7 @@
                 centerMode: true,
                 centerPadding: '-200px',
                 arrows: false,
-                initialSlide: Math.floor(Math.random()*$('#banner').children().length),
+                initialSlide: Math.floor(Math.random() * $('#banner').children().length),
                 //variableWidth: true,
             })
         });
