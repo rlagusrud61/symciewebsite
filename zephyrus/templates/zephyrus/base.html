@@ -70,16 +70,16 @@
         <div class="collapse navbar-collapse" id="navbarToggler">
             <ul class="nav navbar-nav me-auto w-100 justify-content-around">
                 <li class="nav-item">
-{#                    <a class="home" href="{% url 'content' %}">Home</a>#}
-                                    <a class="home" href="{% url 'content:index' symposium='zephyrus' %}">Home</a>
+                    <a class="home" href="{% url 'content' %}">Home</a>
+{#                                    <a class="home" href="{% url 'content:index' symposium='zephyrus' %}">Home</a>#}
                 </li>
                 <li class="nav-item">
-                                    <a class="location" href="{% url 'program:location' symposium='zephyrus' %}">Location</a>
-{#                    <a class="location" href="{% url 'location' %}">Location</a>#}
+{#                                    <a class="location" href="{% url 'program:location' symposium='zephyrus' %}">Location</a>#}
+                    <a class="location" href="{% url 'location' %}">Location</a>
                 </li>
                 <li class="nav-item">
-                                     <a class="partners" href="{% url 'partners:index' symposium='zephyrus'  %}">Partners</a>
-{#                    <a class="partners" href="{% url 'partners' %}">Partners</a>#}
+{#                                     <a class="partners" href="{% url 'partners:index' symposium='zephyrus'  %}">Partners</a>#}
+                    <a class="partners" href="{% url 'partners' %}">Partners</a>
                 </li>
                 {#            <li class="nav-item">#}
                 {#                <a class="speakers" href="{% url 'program:speakers' symposium='zephyrus' %}">Speakers</a>#}
@@ -88,12 +88,12 @@
                 {#                <a class="programme" href="{% url 'program:index' symposium='zephyrus' %}">Programme</a>#}
                 {#            </li>#}
                 <li class="nav-item">
-                                    <a class="committee" href="{% url 'committees:index' symposium='zephyrus' %}">Committee</a>
-{#                    <a class="committee" href="{% url 'committees' %}">Committee</a>#}
+{#                                    <a class="committee" href="{% url 'committees:index' symposium='zephyrus' %}">Committee</a>#}
+                    <a class="committee" href="{% url 'committees' %}">Committee</a>
                 </li>
-                            <li class="nav-item">
-                                <a class="login" href="{% url 'visitors:login' symposium='zephyrus' %}">Tickets</a>
-                            </li>
+{#                            <li class="nav-item">#}
+{#                                <a class="login" href="{% url 'visitors:login' symposium='zephyrus' %}">Tickets</a>#}
+{#                            </li>#}
             </ul>
         </div>
     </div>
