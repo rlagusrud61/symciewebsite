@@ -76,6 +76,7 @@ a.glass-button {
     text-transform: uppercase;
     text-decoration: none;
     transition: 0.4s;
+    z-index: 1000;
 
     -webkit-appearance: button;
     -moz-appearance: button;
