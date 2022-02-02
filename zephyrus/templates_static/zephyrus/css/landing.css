@@ -12,6 +12,11 @@
     padding-bottom: 120px;
 }
 
+.logo-wrapper{
+    /*firefox dumb*/
+    z-index: 1000;
+}
+
 
 .partner-container.wrapper {
     position: relative;

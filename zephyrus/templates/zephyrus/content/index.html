@@ -40,19 +40,20 @@
             <div id="particles-blue" class="particles-container"></div>
             <div id="particles-green" class="particles-container"></div>
             <div id="particles-orange" class="particles-container"></div>
-
-            <div class="d-flex justify-content-center">
-                <img width="50%" class="img-fluid mt-5 pt-5" src="{% static 'zephyrus/img/zephyrus_logo.svg' %}"
-                     alt="Zephyrus Logo">
+            <div class="logo-wrapper">
+                <div class="d-flex justify-content-center">
+                    <img width="50%" class="img-fluid mt-5 pt-5" src="{% static 'zephyrus/img/zephyrus_logo.svg' %}"
+                         alt="Zephyrus Logo">
+                </div>
+                <h3 class="mx-3 mt-4 date"><i class="fas fa-calendar mx-2"
+                                              style="position: relative; font-size: 2.0rem; top:5px"></i>March 16th 2022
+                </h3>
+                <div class="mt-5 wrapper">
+                                    <a href="{% url 'visitors:login' symposium='zephyrus' %}" class="glass-button">Get your ticket! </a>
+{#                    <a href="{% url 'committees' %}" class="glass-button">Get your ticket here! </a>#}
+                </div>
+                <a href="#intro" class="scroll-down"></a>
             </div>
-            <h3 class="mx-3 mt-4 date"><i class="fas fa-calendar mx-2"
-                                          style="position: relative; font-size: 2.0rem; top:5px"></i>March 16th 2022
-            </h3>
-            <div class="mt-5 wrapper">
-                <a href="{% url 'visitors:login' symposium='zephyrus' %}" class="glass-button">Get your ticket! </a>
-                {#                <a href="{% url 'committees' %}" class="glass-button">Get your ticket here! </a>#}
-            </div>
-            <a href="#intro" class="scroll-down"></a>
         </div>
 
     </div>
