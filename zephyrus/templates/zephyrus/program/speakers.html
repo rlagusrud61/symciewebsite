@@ -1,10 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'zephyrus/base.html' %}
+{% load static %}
 
-</body>
-</html>
+{% block title %}
+    | Speakers
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'zephyrus/css/speakers.css' %}">
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block body %}
+    <div class="wrapper">
+
+    <div class="description pt-5 container-fluid">
+    <div class="row">
+        <div class="col-10 offset-1 col-md-8 offset-md-2 d-flex justify-content-center">
+            <h1>Speakers</h1>
+        </div>
+
+        <div class="subtitle">
+            <p>You will meet the following people in our symposium : </p>
+        </div>
+    </div>
+
+
+    <div class="speakers-wrapper">
+
+    {% if speakers %}
+        {% for speaker in speakers.public %}
+
+            <div class="row speaker {% cycle 'one' 'two' 'three' 'four' 'five' 'six' %}">
+
+            {# Numbering #}
+            {% if forloop.counter|divisibleby:2 == 0 %}
+                <div class="col-1 order-md-0">
+            {% else %}
+                <div class="col-1 order-md-3">
+            {% endif %}
+        <div class="number">0{{ foorloop.counter }}</div>
+        </div>
+
+
+            {% if forloop.counter|divisibleby:2 == 0 %}
+                <div class="col-8  col-md-2  img-wrapper order-md-2">
+            {% else %}
+                <div class="col-8 col-md-2 offset-md-1 img-wrapper order-md-1">
+            {% endif %}
+
+        {% if speaker.photo %}
+            <img src="{{ speaker.photo.url }}"
+                 alt={{ speaker.name }}
+            />
+        {% else %}
+            <img
+                    alt="{{ speaker.name }}"
+                    src="{% static 'zephyrus/img/ia-logo' %}"
+            />
+        {% endif %}
+        </div>
+
+            {% if forloop.counter|divisibleby:2 == 0 %}
+                <div class="col-10 offset-1 col-md-7 offset-md-1 order-md-1 bio">
+            {% else %}
+                <div class="col-10 col-md-7  order-md-2 bio">
+            {% endif %}
+
+        <div class="row name">
+            <span>{{ speaker.name }}
+                {% if speaker.organization %} | {{ speaker.organization }} {% endif %}</span>
+        </div>
+        <div class="row description">
+            <span>{{ speaker.bio|safe }}
+                {% if speaker.website %}
+                    <a href="{{ speaker.website }}">
+                    Click here for more info on {{ speaker.organization }}.
+                </a>
+                {% endif %}
+            </span>
+        </div>
+        </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <div class="subtitle">
+            <h3 style="color:black"> There are currently no speakers.</h3>
+        </div>
+    {% endif %}
+
+
+</div>
+</div>
+{% endblock %}

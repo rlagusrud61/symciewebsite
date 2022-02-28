@@ -1,0 +1,111 @@
+.speakers{
+  font-weight: bold;
+}
+
+.number {
+  font-size: 10vw;
+  font-weight: 600;
+  position: sticky;
+  top: 3vw;
+  text-align: center;
+  height: calc(10vw + 20px);
+  transition: all 0.2s ease-in;
+}
+
+
+.header{
+  font-size: min(16vw, 120px);
+  display: flex;
+  justify-content: center;
+  height: 250px;
+}
+
+.speaker{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.speaker .img-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.speaker .img-wrapper img{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 100%;
+}
+
+.speaker .bio .name{
+  display: flex;
+  align-items: flex-end;
+  font-style: italic;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.speaker .bio .description{
+  font-size: 19px;
+}
+
+.speaker .bio .description span a{
+  color: inherit !important;
+}
+
+.one-image, .two-image, .three-image, .four-image, .five-image, .six-image{
+  height: 100px;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: bottom -1px left !important;
+}
+
+.one-linker, .two-linker, .three-linker{
+  height: 100px;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: top -1px left !important;
+}
+
+.five-image, .two-image{
+  background-position: top -2px left !important;
+}
+
+
+.one, .four{
+  background: #0191B4;
+  color: white;
+}
+
+.two, .five{
+  background: white;
+  color: #0191B4;
+}
+
+.three, .six{
+  background: #98d259;
+  color: white;
+}
+
+
+@media screen and (max-width: 767px){
+  .header{
+    height: 150px;
+  }
+
+  .speaker{
+    text-align: center;
+  }
+
+  .speaker .bio .name{
+    justify-content: center;
+  }
+
+  .speaker .bio .name *{
+    display: inline-block;
+  }
+
+  .one-image, .three-image, .four-image, .six-image{
+    background-position: bottom -1px left !important;
+  }
+}
