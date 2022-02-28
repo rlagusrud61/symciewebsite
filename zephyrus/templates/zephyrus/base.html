@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Symposium Zephyrus - {% block title %}Home{% endblock %}</title>
+    <title>Symposium Zephyrus {% block title %}{% endblock %}</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -81,9 +81,11 @@
 {#                                     <a class="partners" href="{% url 'partners:index' symposium='zephyrus'  %}">Partners</a>#}
                     <a class="partners" href="{% url 'partners' %}">Partners</a>
                 </li>
-                {#            <li class="nav-item">#}
-                {#                <a class="speakers" href="{% url 'program:speakers' symposium='zephyrus' %}">Speakers</a>#}
-                {#            </li>#}
+                <li class="nav-item">
+{#                    <a class="speakers" href="{% url 'program:speakers' symposium='zephyrus' %}">Speakers</a>#}
+                  <a class="speakers" href="{% url 'speakers' %}">Speakers</a>
+                </li>
+
                 {#           <li class="nav-item">#}
                 {#                <a class="programme" href="{% url 'program:index' symposium='zephyrus' %}">Programme</a>#}
                 {#            </li>#}
