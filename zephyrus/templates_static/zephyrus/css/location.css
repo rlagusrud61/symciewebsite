@@ -21,8 +21,15 @@
 
 .description p{
     margin-bottom: 20px;
-}
 
+}
+.sub{
+    font-size:min(40px, 10vw);
+    color: #0191B4;
+    margin-bottom: 30px;
+    font-style: italic;
+    font-weight:bold;
+}
 .map {
     height: 700px;
     padding-bottom: min(200px, 20vw);
