@@ -40,7 +40,7 @@
             {% else %}
                 <div class="col-1 order-md-3">
             {% endif %}
-        <div class="number">0{{ foorloop.counter }}</div>
+        <div class="number">0{{ forloop.counter }}</div>
         </div>
 
 
@@ -52,7 +52,7 @@
 
         {% if speaker.photo %}
             <img src="{{ speaker.photo.url }}"
-                 alt={{ speaker.name }}
+                 alt="{{ speaker.name }}"
             />
         {% else %}
             <img

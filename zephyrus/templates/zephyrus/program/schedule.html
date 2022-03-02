@@ -1,10 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'zephyrus/base.html' %}
+{% load static %}
+{% block title %}
+    | Programme
+{% endblock %}
 
-</body>
-</html>
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'zephyrus/css/schedule.css' %}">
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block body %}
+
+    <div class="wrapper">
+        <div class="description section">
+            <div class="pt-5 container-fluid">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2 col-10 offset-1">
+                        <h1>Programme</h1>
+
+                        <div class="subtitle">
+                            Currently we have no programme available. Stay up to date by following our <a
+                                href="https://www.instagram.com/symposiumzephyrus/"><b>Instagram</b></a>!
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -28,3 +28,8 @@ def partners(request):
 def speakers(request):
     template = loader.get_template('zephyrus/program/speakers.html')
     return HttpResponse(template.render({}, request))
+
+
+def programme(request):
+    template = loader.get_template('zephyrus/program/schedule.html')
+    return HttpResponse(template.render({}, request))
