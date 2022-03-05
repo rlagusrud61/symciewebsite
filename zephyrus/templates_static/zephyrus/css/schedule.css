@@ -2,6 +2,10 @@
     font-weight: bold;
 }
 
+.swoosh{
+    display: none !important;
+}
+
 
 .header {
     font-size: min(16vw, 120px);
@@ -103,7 +107,7 @@
 }
 
 .popup .person .image {
-    background-size: cover !important;
+    background-size: contain !important;
     background-repeat: no-repeat !important;
 }
 

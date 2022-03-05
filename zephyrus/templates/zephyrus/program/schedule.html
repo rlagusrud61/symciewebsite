@@ -15,146 +15,149 @@
 {% block body %}
 
     <div class="wrapper">
-    <div class="description section">
-        <div class="pt-5 container-fluid">
-            <div class="row">
-                <div class="col-md-8 offset-md-2 col-10 offset-1">
-                    <h1>Programme</h1>
-                    <div class="subtitle">
-                        {% if locations %}
-                            <div class="schedule-wrapper">
-                                <!--        On desktop we will display this schedule on mobile an accordion is displayed-->
-                                <div class="desktop-schedule">
-                                    <div class="time">
-                                        <div class="column-header blue">
-                                            <span>Timeslot</span>
-                                        </div>
-                                        <!--                Add the timeslots as a column to the start-->
-                                        {% for time, activity in program.items %}
-                                            <div class="empty-slot white" {% if time.duration is not 0 %}
-                                                 style="height: {% widthratio time.duration 1 2 %}px"
-                                            {% else %}
-                                                 style="height: 50px"
-                                            {% endif %}px">
-                                            <span>{{ time.start|date:'H:i' }} – {{ time.end|date:'H:i' }}</span>
-                                            </div>
-                                        {% endfor %}
-                                </div>
-                                <!--            For each location add the a column where we can put the items-->
-                                {% for location in locations %}
-                                    <div class="schedule-location">
-                                    <div class="column-header blue">
-                                        <span>{{ location.name }}</span>
-                                    </div>
-                                    <!--                    Now add the items that belong to this location -->
-                                    {% for time, locations_ in program.items %}
-                                        {% for location_, activity in locations_.items %}
-                                            <!--                            Filter out the items that are not on this location-->
-                                            {% if location == location_ %}
-                                                {% if activity != null %}
-                                                    {% if activity.event.type == 'talk' or activity.event.type == 'demonstration' %}
-                                                        <div class="filled-slot white"
-                                                                {% if time.duration > 10 %}
-                                                             style="height: {% widthratio time.duration 1 2 %}px"
-                                                                {% else %}
-                                                             style="height: 50px"
-                                                                {% endif %}
+        <div class="description section">
+            <div class="pt-5 container-fluid">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2 col-10 offset-1">
+                        <h1>Programme</h1>
+                    </div>
+                </div>
 
-                                                             onclick="showPopup(
-                                                                     [{% for speaker in activity.event.speakers.all %}
-                                                                 {% if speaker.photo %}
-                                                                     '{{ speaker.photo.url }}'
-                                                                 {% else %}
-                                                                     '{% static 'zephyrus/img/zephyrus_logo.svg' %}'
-                                                                 {% endif %}
-                                                             {% endfor %}],
-                                                                     [{% for speaker in activity.event.speakers.all %}
-                                                                 '{{ speaker.name }}'
-                                                             {% endfor %}],
-                                                                     [{% for speaker in activity.event.speakers.all %}
-                                                                 '{{ speaker.bio }}'
-                                                             {% endfor %}],
-                                                                     '{{ activity.event.description|safe }}',
-                                                                     '{{ activity.event.title|safe }}'
-                                                                     )"
-                                                        >
-                                                    {% else %}
-                                                        <div class="empty-slot white"
-                                                             style="height: {% widthratio time.duration 1 2 %}px">
-                                                    {% endif %}
-                                                {{ activity.event.title }}
-                                                </div>
+                {#        Schedule  #}
+                <div class="row">
+                    {% if locations %}
+                        <div class="schedule-wrapper">
+                            <!--        On desktop we will display this schedule on mobile an accordion is displayed-->
+                            <div class="desktop-schedule">
+                                <div class="time">
+                                    <div class="column-header blue">
+                                        <span>Timeslot</span>
+                                    </div>
+                                    <!--                Add the timeslots as a column to the start-->
+                                    {% for time, activity in program.items %}
+                                        <div class="empty-slot white" {% if time.duration is not 0 %}
+                                             style="height: {% widthratio time.duration 1 2 %}px"
+                                        {% else %}
+                                             style="height: 50px"
+                                        {% endif %}px">
+                                        <span>{{ time.start|date:'H:i' }} – {{ time.end|date:'H:i' }}</span>
+                                        </div>
+                                    {% endfor %}
+                            </div>
+                            <!--            For each location add the a column where we can put the items-->
+                            {% for location in locations %}
+                                <div class="schedule-location">
+                                <div class="column-header blue">
+                                    <span>{{ location.name }}</span>
+                                </div>
+                                <!--                    Now add the items that belong to this location -->
+                                {% for time, locations_ in program.items %}
+                                    {% for location_, activity in locations_.items %}
+                                        <!--                            Filter out the items that are not on this location-->
+                                        {% if location == location_ %}
+                                            {% if activity != null %}
+                                                {% if activity.event.type == 'talk' or activity.event.type == 'demonstration' %}
+                                                    <div class="filled-slot white"
+                                                            {% if time.duration > 10 %}
+                                                         style="height: {% widthratio time.duration 1 2 %}px"
+                                                            {% else %}
+                                                         style="height: 50px"
+                                                            {% endif %}
+
+                                                         onclick="showPopup(
+                                                                 [{% for speaker in activity.event.speakers.all %}
+                                                             {% if speaker.photo %}
+                                                                 '{{ speaker.photo.url }}'
+                                                             {% else %}
+                                                                 '{% static 'zephyrus/img/zephyrus_logo.svg' %}'
+                                                             {% endif %}
+                                                         {% endfor %}],
+                                                                 [{% for speaker in activity.event.speakers.all %}
+                                                             '{{ speaker.name }}'
+                                                         {% endfor %}],
+                                                                 [{% for speaker in activity.event.speakers.all %}
+                                                             '{{ speaker.bio }}'
+                                                         {% endfor %}],
+                                                                 '{{ activity.event.description|safe }}',
+                                                                 '{{ activity.event.title|safe }}'
+                                                                 )"
+                                                    >
                                                 {% else %}
-                                                    <div class="empty-slot"
-                                                         style="height: {% widthratio time.duration 1 2 %}px"></div>
+                                                    <div class="empty-slot white"
+                                                         style="height: {% widthratio time.duration 1 2 %}px">
                                                 {% endif %}
+                                            {{ activity.event.title }}
+                                            </div>
+                                            {% else %}
+                                                <div class="empty-slot"
+                                                     style="height: {% widthratio time.duration 1 2 %}px"></div>
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endfor %}
+                            </div>
+                            {% endfor %}
+                            </div>
+                        </div>
+                        <div class="mobile-schedule">
+                        <div id="accordion">
+                            <!--                For every time slot a card is added -->
+                            {% for time, locations_ in program.items %}
+                                <div class="card">
+                                <div class="card-header blue" id="header-{{ forloop.counter }}"
+                                     data-toggle="collapse"
+                                     data-target="#collapse-{{ forloop.counter }}" aria-expanded="false"
+                                     aria-controls="collapse-{{ forloop.counter }}">
+                                    {{ time.start|date:'H:i' }} – {{ time.end|date:'H:i' }}
+                                </div>
+                                <div id="collapse-{{ forloop.counter }}" class="collapse"
+                                     aria-labelledby="header-{{ forloop.counter }}" data-parent="#accordion">
+                                    <div class="card-body white">
+                                        {% for location_, activity in locations_.items %}
+                                            {% if activity != null %}
+                                                {% if activity.event.type == 'talk' or activity.event.type == 'demonstration' %}
+                                                    <div class="filled-card white"
+                                                         onclick="showPopup(
+                                                                 [{% for speaker in activity.event.speakers.all %}
+                                                             {% if speaker.photo %}
+                                                                 '{{ speaker.photo.url }}'
+                                                             {% else %}
+                                                                 '{% static 'zephyrus/img/zephyrus_logo.svg' %}'
+                                                             {% endif %}
+                                                         {% endfor %}],
+                                                                 [{% for speaker in activity.event.speakers.all %}
+                                                             '{{ speaker.name }}'
+                                                         {% endfor %}],
+                                                                 [{% for speaker in activity.event.speakers.all %}
+                                                             '{{ speaker.bio }}'
+                                                         {% endfor %}],
+                                                                 '{{ activity.event.description|safe }}',
+                                                                 '{{ activity.event.title|safe }}'
+                                                                 )">
+                                                    <span class="underlined"><b>{{ location_.name }}:</b> {{ activity.event.title }}</span>
+                                                {% else %}
+                                                    <div class="empty-card white">
+                                                    <span><b>{{ location_ }}:</b> {{ activity.event.title }}</span>
+                                                {% endif %}
+                                            </div>
                                             {% endif %}
                                         {% endfor %}
-                                    {% endfor %}
-                                </div>
-                                {% endfor %}
-                                </div>
-                            </div>
-                            <div class="mobile-schedule">
-                            <div id="accordion">
-                                <!--                For every time slot a card is added -->
-                                {% for time, locations_ in program.items %}
-                                    <div class="card">
-                                    <div class="card-header blue" id="header-{{ forloop.counter }}"
-                                         data-toggle="collapse"
-                                         data-target="#collapse-{{ forloop.counter }}" aria-expanded="false"
-                                         aria-controls="collapse-{{ forloop.counter }}">
-                                        {{ time.start|date:'H:i' }} – {{ time.end|date:'H:i' }}
-                                    </div>
-                                    <div id="collapse-{{ forloop.counter }}" class="collapse"
-                                         aria-labelledby="header-{{ forloop.counter }}" data-parent="#accordion">
-                                        <div class="card-body white">
-                                            {% for location_, activity in locations_.items %}
-                                                {% if activity != null %}
-                                                    {% if activity.event.type == 'talk' or activity.event.type == 'demonstration' %}
-                                                        <div class="filled-card white"
-                                                             onclick="showPopup(
-                                                                     [{% for speaker in activity.event.speakers.all %}
-                                                                 {% if speaker.photo %}
-                                                                     '{{ speaker.photo.url }}'
-                                                                 {% else %}
-                                                                     '{% static 'zephyrus/img/zephyrus_logo.svg' %}'
-                                                                 {% endif %}
-                                                             {% endfor %}],
-                                                                     [{% for speaker in activity.event.speakers.all %}
-                                                                 '{{ speaker.name }}'
-                                                             {% endfor %}],
-                                                                     [{% for speaker in activity.event.speakers.all %}
-                                                                 '{{ speaker.bio }}'
-                                                             {% endfor %}],
-                                                                     '{{ activity.event.description|safe }}',
-                                                                     '{{ activity.event.title|safe }}'
-                                                                     )">
-                                                        <span class="underlined"><b>{{ location_.name }}:</b> {{ activity.event.title }}</span>
-                                                    {% else %}
-                                                        <div class="empty-card white">
-                                                        <span><b>{{ location_ }}:</b> {{ activity.event.title }}</span>
-                                                    {% endif %}
-                                                </div>
-                                                {% endif %}
-                                            {% endfor %}
-                                            </div>
                                         </div>
                                     </div>
-                                {% endfor %}
                                 </div>
+                            {% endfor %}
                             </div>
-                        {% else %}
-                                <div class="no-content col-10 offset-1 col-md-8 offset-md-2">
-                                    <p>We are currently working on our program. Stay up to date by following our <a
-                                            href="https://www.instagram.com/symposiumzephyrus/">Instagram.</a></p>
-                                </div>
-                        {% endif %}
                         </div>
-
+                    {% else %}
+                        <div class="no-content col-10 offset-1 col-md-8 offset-md-2">
+                            <p>We are currently working hard on our program. Stay up to date by following our <a
+                                    href="https://www.instagram.com/symposiumzephyrus/">Instagram!</a></p>
+                        </div>
+                    {% endif %}
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 {% endblock %}
