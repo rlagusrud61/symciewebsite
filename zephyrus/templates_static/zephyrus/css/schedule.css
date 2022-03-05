@@ -2,10 +2,10 @@
     font-weight: bold;
 }
 
-.swoosh{
+/* Hide swoosh for the program page*/
+.swoosh {
     display: none !important;
 }
-
 
 .header {
     font-size: min(16vw, 120px);
@@ -13,10 +13,12 @@
     justify-content: center;
     height: min(25vw, 200px);
 }
-.blue{
+
+.blue {
     background-color: #0191B4;
-    color:white;
+    color: white;
 }
+
 .white {
     background-color: #ffffffd1;
     color: #003a67;
@@ -163,10 +165,6 @@
 
 #accordion .filled-card {
     height: auto;
-}
-
-#accordion .empty-card {
-    height: 30px;
 }
 
 #accordion .filled-card .underlined, #accordion .empty-card .underlined {

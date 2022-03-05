@@ -21,6 +21,12 @@
                     <div class="col-md-8 offset-md-2 col-10 offset-1">
                         <h1>Programme</h1>
                     </div>
+                    <div class="subtitle">
+
+                    <p>We have prepared your day filled with interesting talks
+                    about Environment and IT. Click on a talk to learn more!</p>
+
+                    </div>
                 </div>
 
                 {#        Schedule  #}
@@ -36,10 +42,10 @@
                                     <!--                Add the timeslots as a column to the start-->
                                     {% for time, activity in program.items %}
                                         <div class="empty-slot white" {% if time.duration is not 0 %}
-                                             style="height: {% widthratio time.duration 1 2 %}px"
+                                             style="height: {% widthratio time.duration 1 2 %}px">
                                         {% else %}
-                                             style="height: 50px"
-                                        {% endif %}px">
+                                             style="height: 50px">
+                                        {% endif %}">
                                         <span>{{ time.start|date:'H:i' }} – {{ time.end|date:'H:i' }}</span>
                                         </div>
                                     {% endfor %}
@@ -105,13 +111,13 @@
                             {% for time, locations_ in program.items %}
                                 <div class="card">
                                 <div class="card-header blue" id="header-{{ forloop.counter }}"
-                                     data-toggle="collapse"
-                                     data-target="#collapse-{{ forloop.counter }}" aria-expanded="false"
+                                     data-bs-toggle="collapse"
+                                     data-bs-target="#collapse-{{ forloop.counter }}" aria-expanded="false"
                                      aria-controls="collapse-{{ forloop.counter }}">
                                     {{ time.start|date:'H:i' }} – {{ time.end|date:'H:i' }}
                                 </div>
                                 <div id="collapse-{{ forloop.counter }}" class="collapse"
-                                     aria-labelledby="header-{{ forloop.counter }}" data-parent="#accordion">
+                                     aria-labelledby="header-{{ forloop.counter }}">
                                     <div class="card-body white">
                                         {% for location_, activity in locations_.items %}
                                             {% if activity != null %}
