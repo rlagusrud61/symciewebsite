@@ -44,7 +44,7 @@ nav li {
     position:fixed;
     top: 0;
     width:100%;
-    z-index: 1000000;
+    z-index: 1001;
 }
 .navbar .container-fluid{
    background: black;

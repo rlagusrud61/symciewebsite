@@ -41,11 +41,11 @@
                                     </div>
                                     <!--                Add the timeslots as a column to the start-->
                                     {% for time, activity in program.items %}
-                                        <div class="empty-slot white" {% if time.duration is not 0 %}
-                                             style="height: {% widthratio time.duration 1 2 %}px">
+                                        <div class="empty-slot white" style="{% if time.duration is not 0 %}
+                                             height: {% widthratio time.duration 1 2 %}px">
                                         {% else %}
-                                             style="height: 50px">
-                                        {% endif %}">
+                                             height: 50px">
+                                        {% endif %}
                                         <span>{{ time.start|date:'H:i' }} – {{ time.end|date:'H:i' }}</span>
                                         </div>
                                     {% endfor %}
